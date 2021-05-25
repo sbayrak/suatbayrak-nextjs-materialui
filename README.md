@@ -1,4 +1,4 @@
-## Example app using MongoDB and Material-UI
+## NextJS MongoDB Material-UI Boilerplate
 
 Feel free to fork it.
 
