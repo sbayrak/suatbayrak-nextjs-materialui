@@ -1,5 +1,3 @@
-## NextJS MongoDB Material-UI Boilerplate
+## suatbayrak.com
 
-Feel free to fork it.
-
-This is a boilerplate for NextJS, MongoDB and Material-UI
+My personal website is getting build by NextJS and Material-UI.

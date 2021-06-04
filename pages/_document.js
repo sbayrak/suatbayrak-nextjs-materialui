@@ -2,6 +2,7 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import theme from '../src/theme';
+import Navbar from '../components/Navbar';
 
 export default class MyDocument extends Document {
   render() {
@@ -14,8 +15,19 @@ export default class MyDocument extends Document {
             rel='stylesheet'
             href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
           />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'
+            rel='stylesheet'
+          ></link>
+          <link
+            rel='stylesheet'
+            href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
+            integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=='
+            crossorigin='anonymous'
+            referrerpolicy='no-referrer'
+          />
         </Head>
-        <body>
+        <body style={{ backgroundColor: '#333' }}>
           <Main />
           <NextScript />
         </body>
