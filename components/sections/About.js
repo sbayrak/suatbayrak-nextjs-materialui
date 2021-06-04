@@ -28,9 +28,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.fontWeightBold,
     color: theme.palette.grey[300],
   },
+  aboutTopItem: {
+    marginBottom: theme.spacing(4),
+  },
   Typo2: {
     borderBottom: '1px solid rgba(249,193,28,0.3)',
-    paddingBottom: theme.spacing(2),
+    paddingBottom: theme.spacing(4),
     marginBottom: theme.spacing(2),
     color: theme.palette.grey[300],
   },
@@ -72,7 +75,9 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#ffb400',
     },
   },
-  skillsSection: {},
+  skillsSection: {
+    marginBottom: theme.spacing(5),
+  },
 }));
 
 const About = () => {
@@ -94,13 +99,20 @@ const About = () => {
               />
             </Grid>
             <Grid item md={6} className={classes.gridItem}>
-              <Grid container item md={12} alignItems='center'>
+              <Grid
+                container
+                item
+                md={12}
+                alignItems='center'
+                className={classes.aboutTopItem}
+              >
                 <Grid item md={6}>
                   <Typography
                     variant='h4'
                     className={classes.Typo1}
                     color='secondary'
                     gutterBottom
+                    paragraph
                   >
                     ABOUT ME
                   </Typography>
@@ -126,17 +138,28 @@ const About = () => {
                 </Grid>
               </Grid>
               <Grid item md={12} className={classes.skillsSection}>
-                <Typography variant='h6' color='secondary' gutterBottom>
+                <Typography
+                  variant='h6'
+                  color='secondary'
+                  gutterBottom
+                  paragraph
+                >
                   Education
                 </Typography>
                 <Typography
                   variant='subtitle1'
                   color='secondary'
                   className={classes.Typo3}
+                  gutterBottom
                 >
                   2016 - 2021
                 </Typography>
-                <Typography variant='subtitle2' color='secondary' gutterBottom>
+                <Typography
+                  variant='subtitle2'
+                  color='secondary'
+                  gutterBottom
+                  paragraph
+                >
                   Istanbul Bilgi University, Computer Engineering
                 </Typography>
                 <Typography
@@ -161,7 +184,12 @@ const About = () => {
               {/* SKILLS START */}
 
               <Grid item md={12} className={classes.skillsSection}>
-                <Typography variant='h6' color='secondary' gutterBottom>
+                <Typography
+                  variant='h6'
+                  color='secondary'
+                  gutterBottom
+                  paragraph
+                >
                   Skills
                 </Typography>
                 <Typography
