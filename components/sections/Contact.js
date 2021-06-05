@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: '100%',
     backgroundRepeat: 'repeat',
     backgroundPosition: 'center',
+    paddingTop: theme.spacing(20),
     paddingBottom: theme.spacing(20),
     fontFamily: 'Montserrat',
   },
