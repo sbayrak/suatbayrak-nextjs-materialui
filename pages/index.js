@@ -24,6 +24,14 @@ const useStyles = makeStyles((theme) => ({
   landingContainer: {},
   landingGridContainer: {
     height: '100vh',
+    [theme.breakpoints.down('md')]: {
+      paddingTop: theme.spacing(10),
+    },
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+    },
   },
   landingGridItem: {
     display: 'flex',
@@ -41,14 +49,23 @@ const useStyles = makeStyles((theme) => ({
   Typo1: {
     fontWeight: theme.typography.fontWeightBold,
     fontFamily: 'Montserrat',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '12px',
+    },
   },
   Typo2: {
     fontWeight: theme.typography.fontWeightBold,
     fontFamily: 'Montserrat',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '46px',
+    },
   },
   Typo3: {
     color: theme.palette.grey[400],
     fontFamily: 'Montserrat',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '12px',
+    },
   },
   contactBtn: {
     backgroundColor: '#f9c11c',
@@ -58,6 +75,9 @@ const useStyles = makeStyles((theme) => ({
       'linear-gradient(143deg, rgba(249,193,28,1) 7%, rgba(255,212,85,1) 100%)',
     '&:hover': {
       backgroundColor: '#f7c231',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '12px',
     },
   },
   contactLink: {
@@ -73,6 +93,12 @@ const useStyles = makeStyles((theme) => ({
   sbImg: {
     borderRadius: '30%',
     // boxShadow: '1px 1px 4px 1px rgba(249,193,28,0.1)',
+    [theme.breakpoints.down('sm')]: {
+      width: 375,
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: 275,
+    },
   },
 }));
 
@@ -133,6 +159,7 @@ export default function Home() {
                   src='/suatbayrak.png'
                   alt='suatbayrak'
                   className={classes.sbImg}
+                  loading='lazy'
                 />
               </Grid>
             </Grid>
