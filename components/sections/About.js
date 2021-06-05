@@ -49,6 +49,8 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutTopItem: {
     marginBottom: theme.spacing(4),
+    borderBottom: '1px solid rgba(249,193,28,0.3)',
+    paddingBottom: theme.spacing(4),
   },
   Typo2: {
     borderBottom: '1px solid rgba(249,193,28,0.3)',
