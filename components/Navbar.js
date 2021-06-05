@@ -55,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Montserrat',
     [theme.breakpoints.down('sm')]: {
       fontSize: '25px',
+      display: 'none',
     },
   },
   Typo2: {

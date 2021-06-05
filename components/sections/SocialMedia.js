@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.fontWeightMedium,
     marginBottom: theme.spacing(5),
     letterSpacing: 4,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 20,
+    },
   },
   socialUl: {
     listStyle: 'none',
@@ -31,6 +34,10 @@ const useStyles = makeStyles((theme) => ({
   socialLi: {
     marginLeft: theme.spacing(8),
     marginRight: theme.spacing(8),
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: theme.spacing(3.5),
+      marginRight: theme.spacing(3.5),
+    },
   },
   socialLink: {
     color: '#f9c11c',
@@ -41,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
     transition: '0.5s ease',
     '&:hover': {
       color: '#ffd455',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: theme.spacing(4),
     },
   },
   waveImg: {
