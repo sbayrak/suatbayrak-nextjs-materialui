@@ -20,13 +20,16 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   undrawImg: {
-    width: '100%',
+    width: '80%',
+    height: '75%',
     [theme.breakpoints.down('xs')]: {
       width: '75%',
+      height: '100%',
     },
   },
   gridItemLeft: {
     display: 'flex',
+    padding: 0,
     [theme.breakpoints.down('xs')]: {
       display: 'flex',
       flexDirection: 'row',
