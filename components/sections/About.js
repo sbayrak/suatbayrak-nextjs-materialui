@@ -10,6 +10,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: '100%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    paddingBottom: theme.spacing(20),
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: theme.spacing(15),
+    },
   },
   gridContainer: {},
   gridItem: {
@@ -17,16 +21,31 @@ const useStyles = makeStyles((theme) => ({
   },
   undrawImg: {
     width: '100%',
+    [theme.breakpoints.down('xs')]: {
+      width: '75%',
+    },
   },
   gridItemLeft: {
     display: 'flex',
+    [theme.breakpoints.down('xs')]: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      paddingBottom: theme.spacing(10),
+    },
   },
   Typo3: {
     color: theme.palette.grey[300],
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 12,
+    },
   },
   Typo1: {
     fontWeight: theme.typography.fontWeightBold,
     color: theme.palette.grey[300],
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 24,
+    },
   },
   aboutTopItem: {
     marginBottom: theme.spacing(4),
@@ -36,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(4),
     marginBottom: theme.spacing(2),
     color: theme.palette.grey[300],
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 12,
+    },
   },
   skillsContainer: {},
   skillsItem: {},
@@ -56,27 +78,39 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
   },
   resumeBtn: {
+    backgroundColor: '#f9c11c',
+    boxShadow: theme.shadows[5],
     padding: 0,
+    background:
+      'linear-gradient(143deg, rgba(249,193,28,1) 7%, rgba(255,212,85,1) 100%)',
+    '&:hover': {
+      backgroundColor: '#f7c231',
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 10,
+    },
   },
   resumeLink: {
-    padding: theme.spacing(1),
-    paddingRight: theme.spacing(3),
-    paddingLeft: theme.spacing(3),
+    color: '#212121',
     textDecoration: 'none',
-    backgroundColor: '#f9c11c',
-    color: theme.palette.grey[900],
+    padding: theme.spacing(1),
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
     fontWeight: theme.typography.fontWeightBold,
-    borderRadius: '5px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    transition: '0.3s ease',
-    '&:hover': {
-      backgroundColor: '#ffb400',
+    letterSpacing: 2,
+    fontFamily: 'Montserrat',
+    [theme.breakpoints.down('xs')]: {
+      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2),
     },
   },
   skillsSection: {
     marginBottom: theme.spacing(5),
+  },
+  skillsName: {
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 14,
+    },
   },
 }));
 
@@ -95,6 +129,7 @@ const About = () => {
               <img
                 src='/undrawWebDeveloper.svg'
                 alt='suatbayrak_undraw_web_developer'
+                loading='lazy'
                 className={classes.undrawImg}
               />
             </Grid>
@@ -106,7 +141,7 @@ const About = () => {
                 alignItems='center'
                 className={classes.aboutTopItem}
               >
-                <Grid item md={6}>
+                <Grid item md={6} xs={6}>
                   <Typography
                     variant='h4'
                     className={classes.Typo1}
@@ -122,6 +157,7 @@ const About = () => {
                   justify='flex-end'
                   item
                   md={6}
+                  xs={6}
                   className={classes.gridItemResume}
                 >
                   <Button variant='contained' className={classes.resumeBtn}>
@@ -143,6 +179,7 @@ const About = () => {
                   color='secondary'
                   gutterBottom
                   paragraph
+                  className={classes.skillsName}
                 >
                   Education
                 </Typography>
@@ -159,6 +196,7 @@ const About = () => {
                   color='secondary'
                   gutterBottom
                   paragraph
+                  className={classes.Typo3}
                 >
                   Istanbul Bilgi University, Computer Engineering
                 </Typography>
@@ -189,6 +227,7 @@ const About = () => {
                   color='secondary'
                   gutterBottom
                   paragraph
+                  className={classes.skillsName}
                 >
                   Skills
                 </Typography>
@@ -207,44 +246,56 @@ const About = () => {
                 </Typography>
               </Grid>
 
-              <Grid container item md={12} className={classes.skillsContainer}>
-                <Grid container item md={12} className={classes.skillsItem}>
-                  <Grid item md={6} className={classes.skillsItemSub}>
+              <Grid
+                container
+                item
+                md={12}
+                className={classes.skillsContainer}
+                xs={12}
+              >
+                <Grid
+                  container
+                  item
+                  md={12}
+                  className={classes.skillsItem}
+                  xs={12}
+                >
+                  <Grid item md={6} className={classes.skillsItemSub} xs={6}>
                     <Paper className={classes.paper}>Javascript & ES6</Paper>
                   </Grid>
-                  <Grid item md={6} className={classes.skillsItemSub}>
+                  <Grid item md={6} className={classes.skillsItemSub} xs={6}>
                     <Paper className={classes.paper}>HTML5 & CSS3</Paper>
                   </Grid>
                 </Grid>
 
                 <Grid container item md={12} className={classes.skillsItem}>
-                  <Grid item md={12} className={classes.skillsItemSub}>
+                  <Grid item md={12} className={classes.skillsItemSub} xs={12}>
                     <Paper className={classes.paper}>NextJS</Paper>
                   </Grid>
                 </Grid>
                 <Grid container item md={12} className={classes.skillsItem}>
-                  <Grid item md={7} className={classes.skillsItemSub}>
+                  <Grid item md={7} className={classes.skillsItemSub} xs={7}>
                     <Paper className={classes.paper}>ReactJS</Paper>
                   </Grid>
-                  <Grid item md={5} className={classes.skillsItemSub}>
+                  <Grid item md={5} className={classes.skillsItemSub} xs={5}>
                     <Paper className={classes.paper}>NodeJs</Paper>
                   </Grid>
                 </Grid>
 
                 <Grid container item md={12} className={classes.skillsItem}>
-                  <Grid item md={4} className={classes.skillsItemSub}>
+                  <Grid item md={4} className={classes.skillsItemSub} xs={4}>
                     <Paper className={classes.paper}>MongoDB</Paper>
                   </Grid>
-                  <Grid item md={4} className={classes.skillsItemSub}>
+                  <Grid item md={4} className={classes.skillsItemSub} xs={4}>
                     <Paper className={classes.paper}>Express</Paper>
                   </Grid>
-                  <Grid item md={4} className={classes.skillsItemSub}>
+                  <Grid item md={4} className={classes.skillsItemSub} xs={4}>
                     <Paper className={classes.paper}>Redux</Paper>
                   </Grid>
                 </Grid>
 
                 <Grid container item md={12} className={classes.skillsItem}>
-                  <Grid item md={12} className={classes.skillsItemSub}>
+                  <Grid item md={12} className={classes.skillsItemSub} xs={12}>
                     <Paper className={classes.paper}>Material-UI</Paper>
                   </Grid>
                 </Grid>
