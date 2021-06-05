@@ -114,7 +114,7 @@ const Contact = () => {
   return (
     <>
       <CssBaseline></CssBaseline>
-      <div className={classes.root}>
+      <div className={classes.root} id='contact'>
         <Container>
           <Grid container>
             <Grid item xs={12}>

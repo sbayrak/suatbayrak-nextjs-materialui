@@ -163,22 +163,22 @@ const Navbar = () => {
   const desktop = (
     <ul className={classes.desktopUl}>
       <li className={classes.desktopLi}>
-        <Link href='/' className={classes.desktopLiA}>
+        <Link href='#home' className={classes.desktopLiA}>
           <a className={classes.desktopLiA}>Home</a>
         </Link>
       </li>
       <li className={classes.desktopLi}>
-        <Link href='/about' className={classes.desktopLiA}>
+        <Link href='#about' className={classes.desktopLiA}>
           <a className={classes.desktopLiA}>About</a>
         </Link>
       </li>
       <li className={classes.desktopLi}>
-        <Link href='/portfolio' className={classes.desktopLiA}>
+        <Link href='#portfolio' className={classes.desktopLiA}>
           <a className={classes.desktopLiA}>Portfolio</a>
         </Link>
       </li>
       <li className={classes.desktopLi}>
-        <Link href='/contact' className={classes.desktopLiA}>
+        <Link href='#contact' className={classes.desktopLiA}>
           <a className={classes.desktopLiA}>Contact</a>
         </Link>
       </li>

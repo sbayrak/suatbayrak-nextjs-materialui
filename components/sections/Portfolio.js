@@ -33,7 +33,7 @@ const Portfolio = () => {
   const classes = useStyles();
   return (
     <>
-      <div className={classes.root}>
+      <div className={classes.root} id='portfolio'>
         <Container maxWidth='lg'>
           <Grid container className={classes.rootGridContainer}>
             <Grid item md={12} xs={12}>

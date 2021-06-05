@@ -8,7 +8,6 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
-import Image from 'next/image';
 import SocialMedia from '../components/sections/SocialMedia';
 import About from '../components/sections/About';
 import Portfolio from '../components/sections/Portfolio';
@@ -21,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: '100%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    scrollBehavior: 'smooth',
   },
   landingContainer: {},
   landingGridContainer: {
@@ -113,7 +113,8 @@ export default function Home() {
       </Head>
 
       <CssBaseline></CssBaseline>
-      <div className={classes.root}>
+
+      <div className={classes.root} id='home'>
         <Container maxWidth='lg'>
           <div id='home'>
             <Grid container className={classes.landingGridContainer}>
