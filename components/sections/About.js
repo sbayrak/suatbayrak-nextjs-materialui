@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.grey[800],
     fontWeight: theme.typography.fontWeightMedium,
     color: '#f9c11c',
-    boxShadow: theme.shadows[20],
+    boxShadow: theme.shadows[2],
   },
   gridItemResume: {
     padding: theme.spacing(1),
