@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   },
   desktopUl: {
     display: 'flex',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     alignItems: 'center',
     listStyle: 'none',
     zIndex: 99,
@@ -87,6 +87,7 @@ const useStyles = makeStyles((theme) => ({
   },
   desktopLi: {
     padding: theme.spacing(1),
+    marginLeft: theme.spacing(10),
     // borderBottom: `1px solid ${theme.palette.grey[800]}`,
     // transition: '0.3s ease',
     // '&:hover': {

@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
             referrerpolicy='no-referrer'
           />
         </Head>
-        <body style={{ backgroundColor: '#333' }}>
+        <body style={{ backgroundColor: '#333', fontFamily: 'Montserrat' }}>
           <Main />
           <NextScript />
         </body>

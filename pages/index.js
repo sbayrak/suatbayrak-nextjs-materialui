@@ -12,6 +12,7 @@ import Image from 'next/image';
 import SocialMedia from '../components/sections/SocialMedia';
 import About from '../components/sections/About';
 import Portfolio from '../components/sections/Portfolio';
+import Contact from '../components/sections/Contact';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -170,6 +171,7 @@ export default function Home() {
       <SocialMedia></SocialMedia>
       <About></About>
       <Portfolio></Portfolio>
+      <Contact></Contact>
     </>
   );
 }
