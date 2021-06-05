@@ -1,26 +1,31 @@
 import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
-import {
-  Container,
-  Grid,
-  Typography,
-  Card,
-  CardActionArea,
-  CardMedia,
-  CardContent,
-  CardActions,
-  Button,
-} from '@material-ui/core';
+import { Container, Grid, Typography } from '@material-ui/core';
+import { projects } from '../../src/projects';
+import PortfolioCard from './PortfolioCard';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     background: 'url("/fancy-pants2.png")',
     backgroundSize: '100%',
-    backgroundRepeat: 'no-repeat',
+    backgroundRepeat: 'repeat',
     backgroundPosition: 'center',
+    paddingBottom: theme.spacing(20),
   },
-  card: {
-    maxWidth: 345,
+  rootGridContainer: {},
+
+  Typo1: {
+    fontWeight: theme.typography.fontWeightBold,
+    borderBottom: '1px solid rgba(249,193,28,0.3)',
+    paddingBottom: theme.spacing(4),
+    marginBottom: theme.spacing(6),
+    fontFamily: 'Montserrat',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 30,
+    },
+  },
+  gridContainer: {
+    padding: theme.spacing(1),
   },
 }));
 
@@ -30,55 +35,29 @@ const Portfolio = () => {
     <>
       <div className={classes.root}>
         <Container maxWidth='lg'>
-          <Grid container>
-            <Grid item md={12}>
-              <Typography variant='h4'>Projects</Typography>
+          <Grid container className={classes.rootGridContainer}>
+            <Grid item md={12} xs={12}>
+              <Typography
+                variant='h2'
+                color='secondary'
+                className={classes.Typo1}
+              >
+                Projects
+              </Typography>
             </Grid>
-            <Grid container item md={12}>
-              <Grid item md={4}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    component='img'
-                    alt='suat bayrak'
-                    height='140'
-                    image='/suatbayrak.png'
-                    title='Contemplative Reptile'
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant='h5' component='h2'>
-                      Lizard
-                    </Typography>
-                    <Typography
-                      variant='body2'
-                      color='textSecondary'
-                      component='p'
-                    >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
-                  </CardContent>
-
-                  <CardActions>
-                    <Button size='small' color='primary'>
-                      <Link href='#!'>
-                        <a target='_blank' rel='noreferrer noopener'>
-                          Website
-                        </a>
-                      </Link>
-                    </Button>
-                    <Button size='small' color='primary'>
-                      <Link href='#!'>
-                        <a target='_blank' rel='noreferrer noopener'>
-                          repository
-                        </a>
-                      </Link>
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-              <Grid item md={4}></Grid>
-              <Grid item md={4}></Grid>
+            <Grid
+              container
+              item
+              md={12}
+              className={classes.gridContainer}
+              spacing={3}
+            >
+              {projects.map((project) => (
+                <PortfolioCard
+                  project={project}
+                  key={project.id}
+                ></PortfolioCard>
+              ))}
             </Grid>
           </Grid>
         </Container>
