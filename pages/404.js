@@ -1,6 +1,7 @@
 import { Container, Grid, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -50,6 +51,31 @@ const Custom404 = () => {
   const classes = useStyles();
   return (
     <>
+      <Head>
+        <title>404 | Suat Bayrak</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta
+          name='description'
+          content='Oops! Page Not Found. Find out more for Suat Bayrak , web developer'
+        />
+        <link rel='icon' href='/favicon.ico' />
+
+        <meta name='canonical' href='https://www.suatbayrak.com'></meta>
+        <meta
+          name='keywords'
+          content='suat bayrak, suat, bayrak, web developer, web developer portfolio,
+        suat bayrak bilgi university, suat bayrak linkedin, suat bayrak instagram, mern stack , nextjs, material-ui , suat bayrak sakarya, suat bayrak take advantage, suat bayrak mern stack,  '
+        ></meta>
+        <meta name='author' content='Suat Bayrak'></meta>
+        <meta charSet='UTF-8'></meta>
+        <meta
+          name='viewport'
+          content='minimum-scale=1, initial-scale=1, width=device-width'
+        />
+
+        <meta name='og:title' property='og:title' content='Suat Bayrak'></meta>
+        <meta name='robots' content='index, follow'></meta>
+      </Head>
       <div className={classes.root}>
         <Container>
           <Grid container>

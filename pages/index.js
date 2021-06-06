@@ -150,6 +150,25 @@ export default function Home() {
       <Head>
         <title>Welcome | Suat Bayrak</title>
         <link rel='icon' href='/favicon.ico' />
+        <meta
+          name='description'
+          content='Suat Bayrak. Fullstack web developer and computer engineer. Learn more about me! Or contact me with contact form.'
+        />
+        <meta name='canonical' href='https://www.suatbayrak.com'></meta>
+        <meta
+          name='keywords'
+          content='suat bayrak, suat, bayrak, web developer, web developer portfolio,
+        suat bayrak bilgi university, suat bayrak linkedin, suat bayrak instagram, mern stack , nextjs, material-ui , suat bayrak sakarya, suat bayrak take advantage, suat bayrak mern stack,  '
+        ></meta>
+        <meta name='author' content='Suat Bayrak'></meta>
+        <meta charSet='UTF-8'></meta>
+        <meta
+          name='viewport'
+          content='minimum-scale=1, initial-scale=1, width=device-width'
+        />
+
+        <meta name='og:title' property='og:title' content='Suat Bayrak'></meta>
+        <meta name='robots' content='index, follow'></meta>
       </Head>
 
       <CssBaseline></CssBaseline>
