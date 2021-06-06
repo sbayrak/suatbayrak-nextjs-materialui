@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
   Typo1: {
     borderTop: '1px solid rgba(249,193,28,0.3)',
     paddingTop: theme.spacing(5),
+    paddingBottom: theme.spacing(3),
     // color: theme.palette.grey[400],
     color: '#f9c11c',
     fontFamily: 'Montserrat',
