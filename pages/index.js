@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
+import Image from 'next/image';
 import SocialMedia from '../components/sections/SocialMedia';
 import About from '../components/sections/About';
 import Portfolio from '../components/sections/Portfolio';
@@ -101,10 +102,49 @@ const useStyles = makeStyles((theme) => ({
       width: 250,
     },
   },
+  mobileImg: {
+    display: 'inline',
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+  },
+  desktopImg: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'inline',
+    },
+  },
 }));
 
 export default function Home() {
   const classes = useStyles();
+
+  const mobile = (
+    <div className={classes.mobileImg}>
+      <Image
+        src='/suatbayrak.png'
+        width={250}
+        height={300}
+        alt='suatbayrak'
+        className={classes.sbImg}
+        loading='lazy'
+      />
+    </div>
+  );
+
+  const desktop = (
+    <div className={classes.desktopImg}>
+      <Image
+        src='/suatbayrak.png'
+        width={473}
+        height={528}
+        alt='suatbayrak'
+        className={classes.sbImg}
+        loading='lazy'
+      />
+    </div>
+  );
+
   return (
     <>
       <Head>
@@ -157,12 +197,8 @@ export default function Home() {
                 </div>
               </Grid>
               <Grid item md={6} className={`${classes.landingGridItemRight}`}>
-                <img
-                  src='/suatbayrak.png'
-                  alt='suatbayrak'
-                  className={classes.sbImg}
-                  loading='lazy'
-                />
+                {mobile}
+                {desktop}
               </Grid>
             </Grid>
           </div>

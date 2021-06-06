@@ -1,6 +1,7 @@
 import { Container, Grid, Typography, Button, Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   aboutWrapper: {
@@ -20,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   undrawImg: {
-    width: '80%',
-    height: '75%',
+    width: '100%',
+    transform: 'scale(0.9)',
     [theme.breakpoints.down('xs')]: {
       width: '75%',
       height: '100%',
@@ -57,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
   },
   Typo2: {
     borderBottom: '1px solid rgba(249,193,28,0.3)',
-    paddingBottom: theme.spacing(4),
+    paddingBottom: theme.spacing(3),
     marginBottom: theme.spacing(2),
     color: theme.palette.grey[300],
     [theme.breakpoints.down('xs')]: {
@@ -117,6 +118,11 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 14,
     },
   },
+  thesisLink: {
+    textDecoration: 'none',
+    color: theme.palette.grey[100],
+    fontWeight: theme.typography.fontWeightBold,
+  },
 }));
 
 const About = () => {
@@ -131,8 +137,10 @@ const About = () => {
               md={6}
               className={`${classes.gridItem} ${classes.gridItemLeft}`}
             >
-              <img
-                src='/undrawWebDeveloper.svg'
+              <Image
+                src='/suatbayrak_photo3.jpg'
+                width={626}
+                height={1024}
                 alt='suatbayrak_undraw_web_developer'
                 loading='lazy'
                 className={classes.undrawImg}
@@ -151,8 +159,6 @@ const About = () => {
                     variant='h4'
                     className={classes.Typo1}
                     color='secondary'
-                    gutterBottom
-                    paragraph
                   >
                     ABOUT ME
                   </Typography>
@@ -183,7 +189,6 @@ const About = () => {
                   variant='h6'
                   color='secondary'
                   gutterBottom
-                  paragraph
                   className={classes.skillsName}
                 >
                   Education
@@ -192,7 +197,6 @@ const About = () => {
                   variant='subtitle1'
                   color='secondary'
                   className={classes.Typo3}
-                  gutterBottom
                 >
                   2016 - 2021
                 </Typography>
@@ -200,7 +204,6 @@ const About = () => {
                   variant='subtitle2'
                   color='secondary'
                   gutterBottom
-                  paragraph
                   className={classes.Typo3}
                 >
                   Istanbul Bilgi University, Computer Engineering
@@ -217,7 +220,11 @@ const About = () => {
                   project of a website called as AuctionHouse : Online Bidding,
                   can be found in my{' '}
                   <Link href='https://www.github.com/sbayrak/auctionhouse'>
-                    <a target='_blank' rel='noreferrer noopener'>
+                    <a
+                      target='_blank'
+                      rel='noreferrer noopener'
+                      className={classes.thesisLink}
+                    >
                       {' '}
                       Github repository.
                     </a>
@@ -231,7 +238,6 @@ const About = () => {
                   variant='h6'
                   color='secondary'
                   gutterBottom
-                  paragraph
                   className={classes.skillsName}
                 >
                   Skills

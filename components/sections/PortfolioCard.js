@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Grid,
   Typography,
@@ -66,11 +67,12 @@ const PortfolioCard = ({ project }) => {
     <>
       <Grid item md={4} xs={12}>
         <Card className={classes.card}>
-          <CardMedia
+          <Image
             component='img'
             alt='suat bayrak'
-            height='140'
-            image={project.img}
+            src={project.img}
+            width={400}
+            height={175}
             loading='lazy'
             title={project.name}
             className={classes.cardMedia}
