@@ -10,10 +10,9 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import HomeIcon from '@material-ui/icons/Home';
-import RestaurantMenuIcon from '@material-ui/icons/RestaurantMenu';
+import ReceiptIcon from '@material-ui/icons/Receipt';
 import InfoIcon from '@material-ui/icons/Info';
-import TheatersIcon from '@material-ui/icons/Theaters';
-import EventSeatIcon from '@material-ui/icons/EventSeat';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import { useEffect } from 'react';
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -133,13 +132,20 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     fontFamily: 'Montserrat',
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
   },
   drawerIcon: {
-    paddingRight: theme.spacing(2),
+    paddingRight: theme.spacing(1),
   },
   appbar: {
     zIndex: 99,
     transition: '0.5s ease',
+  },
+  drawer: {
+    '& .MuiDrawer-paperAnchorLeft': {
+      backgroundColor: '#333',
+    },
   },
 }));
 
@@ -193,46 +199,51 @@ const Navbar = () => {
         open={open}
         anchor='left'
         onClose={(e) => setOpen(!open)}
+        className={classes.drawer}
       >
         <ul className={classes.drawerUl}>
           <li className={classes.drawerLi}>
-            <Link href='/' className={classes.drawerLiA}>
-              <>
-                <HomeIcon className={classes.drawerIcon}></HomeIcon> HOME
-              </>
-            </Link>
-          </li>
-          <li className={classes.drawerLi}>
-            <Link href='/about' className={classes.drawerLiA}>
-              <>
-                <InfoIcon className={classes.drawerIcon}></InfoIcon> ABOUT
-              </>
-            </Link>
-          </li>
-          <li className={classes.drawerLi}>
-            <Link href='/menu' className={classes.drawerLiA}>
-              <>
-                <RestaurantMenuIcon
+            <Link href='#home'>
+              <a className={classes.drawerLiA}>
+                <HomeIcon
                   className={classes.drawerIcon}
-                ></RestaurantMenuIcon>
-                MENU
-              </>
+                  fontSize='large'
+                ></HomeIcon>{' '}
+                <Typography>Home</Typography>{' '}
+              </a>
             </Link>
           </li>
           <li className={classes.drawerLi}>
-            <Link href='/gallery' className={classes.drawerLiA}>
-              <>
-                <TheatersIcon className={classes.drawerIcon}></TheatersIcon>
-                GALLERY
-              </>
+            <Link href='#about'>
+              <a className={classes.drawerLiA}>
+                <InfoIcon
+                  className={classes.drawerIcon}
+                  fontSize='large'
+                ></InfoIcon>{' '}
+                <Typography>About</Typography>
+              </a>
             </Link>
           </li>
           <li className={classes.drawerLi}>
-            <Link href='/reservation' className={classes.drawerLiA}>
-              <>
-                <EventSeatIcon className={classes.drawerIcon}></EventSeatIcon>
-                RESERVATION
-              </>
+            <Link href='#portfolio' className={classes.drawerLiA}>
+              <a className={classes.drawerLiA}>
+                <ReceiptIcon
+                  className={classes.drawerIcon}
+                  fontSize='large'
+                ></ReceiptIcon>
+                <Typography>Portfolio</Typography>
+              </a>
+            </Link>
+          </li>
+          <li className={classes.drawerLi}>
+            <Link href='#contact' className={classes.drawerLiA}>
+              <a className={classes.drawerLiA}>
+                <MailOutlineIcon
+                  className={classes.drawerIcon}
+                  fontSize='large'
+                ></MailOutlineIcon>
+                <Typography>Contact</Typography>
+              </a>
             </Link>
           </li>
         </ul>
