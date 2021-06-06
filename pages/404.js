@@ -6,6 +6,14 @@ import Head from 'next/head';
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: theme.spacing(25),
+    background: 'url("/fancy-pants2.png")',
+    backgroundSize: '100%',
+    backgroundRepeat: 'repeat',
+    backgroundPosition: 'center',
+    height: '100vh',
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: theme.spacing(15),
+    },
   },
   undrawImg: {
     width: '100%',
