@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: '100%',
     backgroundRepeat: 'repeat',
     backgroundPosition: 'center',
-    position: 'fixed',
+    position: 'static',
     bottom: 0,
     width: '100%',
   },
