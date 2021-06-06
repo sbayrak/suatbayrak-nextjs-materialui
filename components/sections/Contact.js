@@ -1,5 +1,6 @@
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import {
   CssBaseline,
   Container,
@@ -7,7 +8,11 @@ import {
   Typography,
   TextField,
   Button,
+  Paper,
 } from '@material-ui/core';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 const CssTextField = withStyles({
   root: {
@@ -103,14 +108,94 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(5),
     paddingRight: theme.spacing(5),
     fontFamily: 'Montserrat',
+    marginRight: theme.spacing(2),
+    marginBottom: theme.spacing(2),
     [theme.breakpoints.down('sm')]: {
       fontSize: '12px',
     },
+  },
+  paper: {
+    // backgroundColor: '#4CAF50',
+    background: 'transparent',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    padding: theme.spacing(1),
+  },
+  paperSpan: {
+    // color: theme.palette.grey[100],
+    color: '#4caf50',
+    fontWeight: theme.typography.fontWeightBold,
+    fontFamily: 'Montserrat',
+    paddingLeft: theme.spacing(1),
   },
 }));
 
 const Contact = () => {
   const classes = useStyles();
+  const router = useRouter();
+
+  const [name, setName] = useState('');
+  const [nameError, setNameError] = useState(false);
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState(false);
+  const [emailHelperText, setEmailHelperText] = useState('');
+  const [message, setMessage] = useState('');
+  const [messageError, setMessageError] = useState(false);
+  const [messageHelperText, setMessageHelperText] = useState('');
+  const [msgResult, setMsgResult] = useState(false);
+
+  function emailIsValid(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  useEffect(() => {
+    if (name.length > 3) {
+      setNameError(false);
+    }
+    if (email.length > 6) {
+      setEmailError(false);
+    }
+    if (message.length > 16) {
+      setMessageError(false);
+    }
+  }, [name, email, message]);
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+
+    if (!name) {
+      setNameError(true);
+    }
+    if (!email) {
+      setEmailError(true);
+    }
+    if (!message) {
+      setMessageError(true);
+    } else if (!emailIsValid(email)) {
+      setEmailError(true);
+      setEmailHelperText('Please enter a valid e-mail');
+    } else if (message.length <= 16) {
+      setMessageError(true);
+      setMessageHelperText('Please enter a message longer than 16 characters');
+    } else {
+      const emailData = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await emailData.json();
+      setName('');
+      setEmail('');
+      setMessage('');
+      setMsgResult(data.success);
+      // router.push('/');
+    }
+  };
+
   return (
     <>
       <CssBaseline></CssBaseline>
@@ -142,7 +227,7 @@ const Contact = () => {
                     color='primary'
                   ></MailOutlineIcon>
                 </Grid>
-                <form className={classes.form}>
+                <form className={classes.form} onSubmit={submitHandler}>
                   <Grid item md={12} className={classes.formItem}>
                     <CssTextField
                       label='Your name'
@@ -150,6 +235,9 @@ const Contact = () => {
                       name='name'
                       className={classes.formTxt}
                       color='secondary'
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      error={nameError}
                       fullWidth
                     ></CssTextField>
                   </Grid>
@@ -159,6 +247,10 @@ const Contact = () => {
                       name='email'
                       variant='outlined'
                       className={classes.formTxt}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      error={emailError}
+                      helperText={emailHelperText}
                       fullWidth
                     ></CssTextField>
                   </Grid>
@@ -169,6 +261,10 @@ const Contact = () => {
                       name='message'
                       multiline
                       className={classes.formTxt}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      error={messageError}
+                      helperText={messageHelperText}
                       fullWidth
                       rows={10}
                     />
@@ -181,6 +277,14 @@ const Contact = () => {
                     >
                       Send
                     </Button>
+                    {msgResult && (
+                      <Paper className={classes.paper} elevation={0}>
+                        <CheckCircleIcon
+                          style={{ color: '#4caf50' }}
+                        ></CheckCircleIcon>
+                        <span className={classes.paperSpan}>Success!</span>
+                      </Paper>
+                    )}
                   </Grid>
                 </form>
               </Grid>
