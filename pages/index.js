@@ -151,6 +151,10 @@ export default function Home() {
         <title>Welcome | Suat Bayrak</title>
         <link rel='icon' href='/favicon.ico' />
         <meta
+          name='google-site-verification'
+          content='G19UOSOLedVnIhpeey7SJ4mtTO6fALqUvSxsZZ4KxLo'
+        />
+        <meta
           name='description'
           content='Suat Bayrak. Fullstack web developer and computer engineer. Learn more about me! Or contact me with contact form.'
         />
