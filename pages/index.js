@@ -7,6 +7,7 @@ import {
   CssBaseline,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import suatbayrak from '../public/suatbayrak.png';
 import Link from 'next/link';
 import Image from 'next/image';
 import SocialMedia from '../components/sections/SocialMedia';
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   landingGridContainer: {
     height: '100vh',
     [theme.breakpoints.down('md')]: {
-      paddingTop: theme.spacing(10),
+      paddingTop: theme.spacing(5),
     },
     [theme.breakpoints.down('sm')]: {
       display: 'flex',
@@ -114,6 +115,7 @@ const useStyles = makeStyles((theme) => ({
       display: 'inline',
     },
   },
+  mobileSbImg: {},
 }));
 
 export default function Home() {
@@ -122,12 +124,13 @@ export default function Home() {
   const mobile = (
     <div className={classes.mobileImg}>
       <Image
-        src='/suatbayrak.png'
-        width={250}
-        height={300}
+        src={suatbayrak}
         alt='suatbayrak'
-        className={classes.sbImg}
+        className={`${classes.sbImg} ${classes.mobileSbImg}`}
         loading='lazy'
+        placeholder='blur'
+        width={225}
+        height={250}
       />
     </div>
   );
@@ -135,12 +138,11 @@ export default function Home() {
   const desktop = (
     <div className={classes.desktopImg}>
       <Image
-        src='/suatbayrak.png'
-        width={473}
-        height={528}
+        src={suatbayrak}
         alt='suatbayrak'
         className={classes.sbImg}
         loading='lazy'
+        placeholder='blur'
       />
     </div>
   );
