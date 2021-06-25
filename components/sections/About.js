@@ -2,6 +2,7 @@ import { Container, Grid, Typography, Button, Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Link from 'next/link';
 import Image from 'next/image';
+import suatbayrak from '../../public/suatbayrak_photo3.jpg';
 
 const useStyles = makeStyles((theme) => ({
   aboutWrapper: {
@@ -138,9 +139,8 @@ const About = () => {
               className={`${classes.gridItem} ${classes.gridItemLeft}`}
             >
               <Image
-                src='/suatbayrak_photo3.jpg'
-                width={626}
-                height={1024}
+                src={suatbayrak}
+                placeholder='blur'
                 alt='suatbayrak_undraw_web_developer'
                 loading='lazy'
                 className={classes.undrawImg}

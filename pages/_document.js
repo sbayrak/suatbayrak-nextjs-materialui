@@ -17,10 +17,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TCCGQNQ');`,
             }}
           ></script>
+
           <meta
             name='google-site-verification'
             content='G19UOSOLedVnIhpeey7SJ4mtTO6fALqUvSxsZZ4KxLo'
           />
+          <meta
+            name='description'
+            content='Suat Bayrak. Fullstack web developer and computer engineer. Learn more about me! Or contact me with contact form.'
+          />
+          <meta name='canonical' href='https://www.suatbayrak.com'></meta>
+          <meta
+            name='keywords'
+            content='suat bayrak, suat, bayrak, web developer, web developer portfolio,
+        suat bayrak bilgi university, suat bayrak linkedin, suat bayrak instagram, mern stack , nextjs, material-ui , suat bayrak sakarya, suat bayrak take advantage, suat bayrak mern stack,  '
+          ></meta>
+          <meta name='author' content='Suat Bayrak'></meta>
+          <meta charSet='UTF-8'></meta>
+
+          <meta
+            name='og:title'
+            property='og:title'
+            content='Suat Bayrak'
+          ></meta>
+          <meta name='robots' content='index, follow'></meta>
           {/* PWA primary color */}
           <meta name='theme-color' content={theme.palette.primary.main} />
           <link

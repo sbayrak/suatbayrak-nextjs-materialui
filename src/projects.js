@@ -10,8 +10,7 @@ export const projects = [
   {
     id: '2',
     name: 'SBShop E-Commerce',
-    desc:
-      'SBShop is a online shop sells electronics. Only PayPal payment is accepted. Stripe will come soon!. Also working on accepting crypto payments...',
+    desc: 'SBShop is a online shop sells electronics. Only PayPal payment is accepted. Stripe will come soon!. Also working on accepting crypto payments...',
     website: 'https://sbshop.herokuapp.com/',
     repository: 'https://github.com/sbayrak/sbshop-mern',
     img: '/portfolio2.png',
@@ -19,8 +18,7 @@ export const projects = [
   {
     id: '3',
     name: 'Breaking Bad API',
-    desc:
-      'Used BreakingBad api to display characters of the show. Also has a search bar.',
+    desc: 'Used BreakingBad api to display characters of the show. Also has a search bar.',
     website: 'https://breakingbad01.netlify.app/',
     repository: 'https://github.com/sbayrak/breakingbad-api-react',
     img: '/react_logo.png',
@@ -36,8 +34,7 @@ export const projects = [
   {
     id: '5',
     name: 'DevConnector',
-    desc:
-      'Medium size social media for developers, where you can create a profile, education information, make posts, comment and like functionality.',
+    desc: 'Medium size social media for developers, where you can create a profile, education information, make posts, comment and like functionality.',
     website: 'https://devconnector52.herokuapp.com/',
     repository: 'https://github.com/sbayrak/mern-devconnector',
     img: '/portfolio4.png',
@@ -45,8 +42,7 @@ export const projects = [
   {
     id: '6',
     name: 'AuctionHouse',
-    desc:
-      'AuctionHouse is a tender based web application where the companies may register with requested mandatory informations (tax number, website, tax office name, etc...) and open a tender and get offers from other companies.',
+    desc: 'AuctionHouse is a tender based web application where the companies may register with requested mandatory informations (tax number, website, tax office name, etc...) and open a tender and get offers from other companies.',
     website: 'https://auctionhouse12.herokuapp.com/',
     repository: 'https://github.com/sbayrak/auctionhouse',
     img: '/portfolio5.png',
@@ -60,16 +56,15 @@ export const projects = [
     img: '/portfolio6.png',
   },
   {
-    id: '7',
+    id: '8',
     name: 'PokemonAPI',
-    desc:
-      'A fan of Pokemon ? You may find your favorite pokemons in this website among thousands of pokemons...',
+    desc: 'A fan of Pokemon ? You may find your favorite pokemons in this website among thousands of pokemons...',
     website: 'https://react-pokemonapi.web.app/',
     repository: 'https://github.com/sbayrak/react-pokemonapi',
     img: '/portfolio7.png',
   },
   {
-    id: '8',
+    id: '9',
     name: 'fbmessengerclone',
     desc: 'Facebook Messenger clone with ReactJS and Firebase.',
     website: 'https://fbmessengerclone-7bc8a.web.app/',

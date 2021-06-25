@@ -166,6 +166,10 @@ const Navbar = () => {
     }
   };
 
+  const openHandler = () => {
+    console.log('hi');
+  };
+
   const desktop = (
     <ul className={classes.desktopUl}>
       <li className={classes.desktopLi}>
@@ -199,6 +203,7 @@ const Navbar = () => {
         open={open}
         anchor='left'
         onClose={(e) => setOpen(!open)}
+        onOpen={openHandler}
         className={classes.drawer}
       >
         <ul className={classes.drawerUl}>
