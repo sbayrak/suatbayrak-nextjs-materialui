@@ -1,6 +1,14 @@
 export const projects = [
   {
     id: '1',
+    name: 'KoslowShop',
+    desc: 'An e-commerce website. Still in development.',
+    website: 'https://koslowshop.vercel.app/',
+    repository: 'https://github.com/sbayrak/koslowshop',
+    img: '/portfolio8.png',
+  },
+  {
+    id: '2',
     name: 'SB Steakhouse',
     desc: 'SB Steakhouse template website for restaurants.',
     website: 'https://bayrak-steakhouse.netlify.app/',
@@ -8,7 +16,7 @@ export const projects = [
     img: '/portfolio1.png',
   },
   {
-    id: '2',
+    id: '3',
     name: 'SBShop E-Commerce',
     desc:
       'SBShop is a online shop sells electronics. Only PayPal payment is accepted. Stripe will come soon!. Also working on accepting crypto payments...',
@@ -17,7 +25,7 @@ export const projects = [
     img: '/portfolio2.png',
   },
   {
-    id: '3',
+    id: '4',
     name: 'Breaking Bad API',
     desc:
       'Used BreakingBad api to display characters of the show. Also has a search bar.',
@@ -26,7 +34,7 @@ export const projects = [
     img: '/react_logo.png',
   },
   {
-    id: '4',
+    id: '5',
     name: 'ContactKeeper',
     desc: 'Simple contact keeper app on web.',
     website: '',
@@ -34,7 +42,7 @@ export const projects = [
     img: '/portfolio3.png',
   },
   {
-    id: '5',
+    id: '6',
     name: 'DevConnector',
     desc:
       'Medium size social media for developers, where you can create a profile, education information, make posts, comment and like functionality.',
@@ -43,7 +51,7 @@ export const projects = [
     img: '/portfolio4.png',
   },
   {
-    id: '6',
+    id: '7',
     name: 'AuctionHouse',
     desc:
       'AuctionHouse is a tender based web application where the companies may register with requested mandatory informations (tax number, website, tax office name, etc...) and open a tender and get offers from other companies.',
@@ -52,7 +60,7 @@ export const projects = [
     img: '/portfolio5.png',
   },
   {
-    id: '7',
+    id: '8',
     name: 'CryptoMarket',
     desc: 'Cryptocurrency market made with API from coingecko and ReactJS.',
     website: 'https://cryptomarket.netlify.app/',
@@ -60,7 +68,7 @@ export const projects = [
     img: '/portfolio6.png',
   },
   {
-    id: '7',
+    id: '9',
     name: 'PokemonAPI',
     desc:
       'A fan of Pokemon ? You may find your favorite pokemons in this website among thousands of pokemons...',
@@ -69,7 +77,7 @@ export const projects = [
     img: '/portfolio7.png',
   },
   {
-    id: '8',
+    id: '10',
     name: 'fbmessengerclone',
     desc: 'Facebook Messenger clone with ReactJS and Firebase.',
     website: 'https://fbmessengerclone-7bc8a.web.app/',
