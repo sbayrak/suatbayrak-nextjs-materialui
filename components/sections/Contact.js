@@ -13,6 +13,8 @@ import {
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
+import undrawEmail from '../../public/undrawEmail.svg';
 
 const CssTextField = withStyles({
   root: {
@@ -213,8 +215,8 @@ const Contact = () => {
             </Grid>
             <Grid item container md={12} className={classes.gridContainer}>
               <Grid item md={6} xs={12}>
-                <img
-                  src='/undrawEmail.svg'
+                <Image
+                  src={undrawEmail}
                   alt='suatbayrak'
                   loading='lazy'
                   className={classes.contactImg}
