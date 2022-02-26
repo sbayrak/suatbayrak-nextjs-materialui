@@ -172,7 +172,7 @@ const About = () => {
                   className={classes.gridItemResume}
                 >
                   <Button variant='contained' className={classes.resumeBtn}>
-                    <Link href='https://drive.google.com/file/d/1qVWUIYXrJPb2OKS-5ja1RsCrnXnW1z3T/view?usp=sharing'>
+                    <Link href={`/resume.pdf`}>
                       <a
                         target='_blank'
                         rel='noreferrer noopener'
@@ -306,7 +306,13 @@ const About = () => {
                 </Grid>
 
                 <Grid container item md={12} className={classes.skillsItem}>
-                  <Grid item md={12} className={classes.skillsItemSub} xs={12}>
+                  <Grid item md={4} className={classes.skillsItemSub} xs={12}>
+                    <Paper className={classes.paper}>SCSS</Paper>
+                  </Grid>
+                  <Grid item md={4} className={classes.skillsItemSub} xs={12}>
+                    <Paper className={classes.paper}>Bootstrap</Paper>
+                  </Grid>
+                  <Grid item md={4} className={classes.skillsItemSub} xs={12}>
                     <Paper className={classes.paper}>Material-UI</Paper>
                   </Grid>
                 </Grid>

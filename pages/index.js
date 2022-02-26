@@ -214,9 +214,25 @@ export default function Home() {
                     variant='contained'
                     className={classes.contactBtn}
                     size='large'
+                    style={{ marginRight: '26px' }}
                   >
                     <Link href='#contact'>
                       <a className={classes.contactLink}>Contact</a>
+                    </Link>
+                  </Button>
+                  <Button
+                    variant='contained'
+                    className={classes.contactBtn}
+                    size='large'
+                  >
+                    <Link href={`/resume.pdf`}>
+                      <a
+                        className={classes.contactLink}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        Resume
+                      </a>
                     </Link>
                   </Button>
                 </div>
