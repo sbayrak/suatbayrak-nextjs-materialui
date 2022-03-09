@@ -198,6 +198,29 @@ const About = () => {
                   color='secondary'
                   className={classes.Typo3}
                 >
+                  2021 - Current
+                </Typography>
+                <Typography
+                  variant='subtitle2'
+                  color='secondary'
+                  gutterBottom
+                  className={classes.Typo3}
+                >
+                  University of Technology Chemnitz, Web Engineering M.Sc.
+                </Typography>
+                <Typography
+                  variant='body2'
+                  color='secondary'
+                  className={classes.Typo2}
+                >
+                  As my journey on web development continues, learning concepts
+                  about Web Engineering
+                </Typography>
+                <Typography
+                  variant='subtitle1'
+                  color='secondary'
+                  className={classes.Typo3}
+                >
                   2016 - 2021
                 </Typography>
                 <Typography
