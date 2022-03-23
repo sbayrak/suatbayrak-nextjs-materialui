@@ -1,6 +1,14 @@
 export const projects = [
   {
     id: '1',
+    name: 'SearchIt',
+    desc: 'Simple search engine like Google. Made with React.js and Typescript.',
+    website: 'https://searchit-react-typescript.vercel.app/',
+    repository: 'https://github.com/sbayrak/searchit-react-typescript',
+    img: '/portfolio12.png',
+  },
+  {
+    id: '2',
     name: 'KoslowShop',
     desc: 'An e-commerce website. Still in development.',
     website: 'https://koslowshop.vercel.app/',
@@ -8,7 +16,7 @@ export const projects = [
     img: '/portfolio8.png',
   },
   {
-    id: '2',
+    id: '3',
     name: 'SB Steakhouse',
     desc: 'SB Steakhouse template website for restaurants.',
     website: 'https://bayrak-steakhouse.netlify.app/',
@@ -16,7 +24,7 @@ export const projects = [
     img: '/portfolio1.png',
   },
   {
-    id: '3',
+    id: '4',
     name: 'YouTube Clone',
     desc: 'A clone of YouTube, currently is under development. Its using YouTube V3 Data API from Google. A React.js application. (Not Completed)',
     website: 'http://youtube-clone-react-ten.vercel.app/',
@@ -24,7 +32,7 @@ export const projects = [
     img: '/portfolio9.png',
   },
   {
-    id: '4',
+    id: '5',
     name: 'GoogleDocs Clone',
     desc: 'A simple clone of Google Docs, made with React.js, MongoDB and SocketIO Deployed on Netlify',
     website: 'https://googledocs-clone-sbayrak.netlify.app/',
@@ -32,7 +40,7 @@ export const projects = [
     img: '/portfolio10.png',
   },
   {
-    id: '5',
+    id: '6',
     name: 'SBShop E-Commerce',
     desc: 'SBShop is a online shop sells electronics. Only PayPal payment is accepted. Stripe will come soon!. Also working on accepting crypto payments...',
     website: 'https://sbshop.herokuapp.com/',
@@ -40,7 +48,7 @@ export const projects = [
     img: '/portfolio2.png',
   },
   {
-    id: '6',
+    id: '7',
     name: 'NextAuth Authentication',
     desc: 'The boilerplate of how a complete authentication and authorization works with NextAuth inside Next.js Also added password reset and e-mail verification.',
     website: 'https://nextauth-authentication.vercel.app/',
@@ -49,7 +57,7 @@ export const projects = [
     img: '/portfolio11.png',
   },
   {
-    id: '7',
+    id: '8',
     name: 'PokemonAPI',
     desc: 'Simple React app to display Pokemons',
     website: 'https://react-pokemonapi.web.app/',
@@ -57,7 +65,7 @@ export const projects = [
     img: '/portfolio7.png',
   },
   {
-    id: '8',
+    id: '9',
     name: 'DevConnector',
     desc: 'Medium size social media for developers, where you can create a profile, education information, make posts, comment and like functionality.',
     website: 'https://devconnector52.herokuapp.com/',
@@ -65,7 +73,7 @@ export const projects = [
     img: '/portfolio4.png',
   },
   {
-    id: '9',
+    id: '10',
     name: 'ContactKeeper',
     desc: 'Simple contact keeper app on web. Built with MERN stack. React, Nodejs, Express and MongoDB',
     website: '',
@@ -74,7 +82,7 @@ export const projects = [
   },
 
   {
-    id: '10',
+    id: '11',
     name: 'AuctionHouse',
     desc: 'AuctionHouse is a tender based web application where the companies may register with requested mandatory informations (tax number, website, tax office name, etc...) and open a tender and get offers from other companies.',
     website: 'https://auctionhouse12.herokuapp.com/',
