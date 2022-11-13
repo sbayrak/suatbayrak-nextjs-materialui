@@ -3,6 +3,10 @@ import sgMail from '@sendgrid/mail';
 export default async (req, res) => {
   sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY2);
 
+  if (req.method === 'POST') {
+    res.setHeader('Allow', 'POST');
+  }
+
   const { name, email, message } = req.body;
 
   let userForm = {
